@@ -44,6 +44,7 @@ The game interface is built using **HTML, CSS, and JavaScript**, ensuring a smoo
 - **Smart Contract Address (Game)**: `0x7F053fFD695204168cEDf535128bd0CF73F6A452`
 - **Smart Contract Address (MemeCoin)**: `0xa1b68a5fD0E5fA13cD6B8031A2Ee8ce084D31b2e`
 - **Token Used**: **TheUnlimitedCoin (TUC)**
+- **View In Explorer**: [Visit](https://xt4scan.ngd.network/address/0x7F053fFD695204168cEDf535128bd0CF73F6A452)
 
 ---
 
