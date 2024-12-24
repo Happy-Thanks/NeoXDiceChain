@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Game</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background-size: 200% 200%;
+            animation: bgAnimation 5s ease infinite;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            font-size: 16px;
+        }
+
+        @keyframes bgAnimation {
+            0% { background-position: 200% 0; }
+            50% { background-position: 0 100%; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 2rem;
+            position: absolute;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f9ca24;
+        }
+
+        /* Glass Card (Game Section) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem;
+        }
+
+        /* Title */
+        #gameTitle {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        /* Input Container */
+        #inputContainer {
+            margin-bottom: 2rem;
+        }
+
+        #guessInput {
+            padding: 1rem;
+            width: 80%;
+            font-size: 1.5rem;
+            border: 2px solid #fff;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Button Container */
+        #buttonContainer {
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            background: #f9ca24;
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background: #ffeaa7;
+        }
+
+        /* Game Result */
+        #gameResultContainer {
+            margin-top: 2rem;
+        }
+
+        #gameResultMessage {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Claim Tokens Section */
+        #claimTokensContainer {
+            margin-top: 2rem;
+        }
+
+        /* Wallet Address Display */
+        #walletAddress {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            word-wrap: break-word;
+        }
+
+        /* Hidden class for hiding sections */
+        .hidden {
+            display: none;
+        }
+
+        /* Animations */
+        .fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card" id="walletSection" class="fadeIn">
+        <h1 id="gameTitle">Dice Roll Game</h1>
+        <button class="button" id="connectButton" onclick="connectWallet()">Connect Wallet</button>
+    </div>
+
+    <div class="glass-card hidden fadeIn" id="startGameSection">
+        <h1 id="gameTitle">Dice Roll Game</h1>
+        <button class="button" onclick="startGame()">Start Game</button>
+        <button class="button" onclick="claimTokens()">Claim Tokens</button>
+    </div>
+
+    <div class="glass-card hidden fadeIn" id="guessingSection">
+        <h1 id="gameTitle">Make Your Guess</h1>
+        <p>Guess a number between 1 and 6</p>
+        <div id="inputContainer">
+            <input type="number" id="guess" min="1" max="6" placeholder="Enter your guess" required>
+        </div>
+        <div id="buttonContainer">
+            <button class="button" onclick="playGame()">Play</button>
+        </div>
+    </div>
+
+    <div class="glass-card hidden fadeIn" id="claimTokensSection">
+        <h1 id="gameTitle">Claim Your Tokens</h1>
+        <button class="button" onclick="claimTokens()">Claim Tokens</button>
+    </div>
+
+    <div class="glass-card hidden fadeIn" id="gameResult">
+        <h1 id="gameResultMessage">Game Result</h1>
+    </div>
+
+    <!-- Wallet Address Display -->
+    <div id="walletAddress" class="hidden"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    animation: bg-animation 10s infinite alternate;
+    cursor: none;
+}
+
+/* Spotlight Effect on Cursor */
+body::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+}
+
+/* Position cursor spotlight at mouse location */
+body:hover::before {
+    position: fixed;
+    left: calc(var(--x) - 75px);  /* Adjust position */
+    top: calc(var(--y) - 75px);   /* Adjust position */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f9ca24;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.landing-content {
+    animation: fadeIn 2s ease;
+}
+
+.highlight {
+    color: #f9ca24;
+    font-weight: bold;
+}
+
+.play-now {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #f9ca24;
+    color: #000;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.play-now:hover {
+    transform: scale(1.1);
+    background: #ffeaa7;
+}
+
+/* Game Section with Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    text-align: center;
+}
