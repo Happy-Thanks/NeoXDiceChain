@@ -1,50 +1,72 @@
 # DiceChain - Decentralized Dice Roll Game
 
-**DiceChain** is a decentralized blockchain-based game where players can participate in a dice roll game and earn rewards. Players use **TheUnlimitedCoin (TUC)** to participate in the game and win rewards. The game mechanics are powered by smart contracts on the blockchain.
+**DiceChain** is a decentralized blockchain-based game where players participate in a dice roll game to earn rewards. Players use **TheUnlimitedCoin (TUC)** to join the game and win exciting prizes. The game mechanics are powered by smart contracts deployed on the **Neo X Testnet T4**, with **GAS** as the network currency.
+
+---
 
 ## Features
-- **Interactive Gameplay**: Guess the dice roll outcome and participate in the game.
-- **Blockchain Integration**: Game logic secured via a smart contract.
-- **Token Rewards**: Earn **TUC** tokens for correct guesses.
-- **Decentralized**: All game operations are transparent and stored on the blockchain.
+- **Interactive Gameplay**: Players guess the dice roll outcome and participate in the game.
+- **Blockchain Integration**: Game logic is secured via smart contracts, ensuring transparency and fairness.
+- **Token Rewards**: Players earn **TUC** tokens for correct guesses.
+- **Decentralized Operations**: All transactions and game operations are transparent and stored immutably on the blockchain.
+
+---
 
 ## Contract Details
+- **Coin Name**: GAS (used for transaction fees)
 - **Token Name**: TheUnlimitedCoin (TUC)
-- **Network**: Ethereum Testnet (Mantle Sepolia)
+- **Network**: Neo X Testnet T4
+
+---
 
 ## How It Works
-1. **Entry Fee**: Players pay an entry fee of **1 TUC** to start the game.
-2. **Gameplay**: Players guess the outcome of the dice roll (1 to 6).
-3. **Winning Rewards**: Winners receive **2 TUC** tokens as a reward.
-4. **Frontend Integration**: Tokens are claimed directly from the frontend through the TUC token smart contract.
+1. **Entry Fee**: Players pay an entry fee of **1 TUC** to participate.
+2. **Gameplay**: Players guess the outcome of the dice roll (a number between 1 and 6).
+3. **Winning Rewards**: Winners are rewarded with **2 TUC** tokens.
+4. **Frontend Integration**: Players claim rewards directly through the frontend, interacting with the TUC token smart contract.
+
+---
 
 ## Frontend
-The game interface is built with **HTML, CSS, and JavaScript**, providing an engaging and interactive experience for players. It connects to the blockchain using **web3.js** to interact with the smart contract.
+The game interface is built using **HTML, CSS, and JavaScript**, ensuring a smooth and engaging experience for players. The frontend connects to the blockchain using **web3.js** to interact with the smart contract.
+
+---
 
 ## How to Play
-1. **Connect Wallet**: Use MetaMask to connect your wallet to the application.
-2. **Pay Entry Fee**: Deduct 1 TUC to start the game.
-3. **Make a Guess**: Guess a number between 1 and 6 for the dice roll.
-4. **Claim Rewards**: Winners automatically receive 2 TUC tokens in their account.
+1. **Connect Wallet**: Use a compatible wallet like NeoLine or O3 to connect to the application.
+2. **Pay Entry Fee**: Deduct 1 TUC from your wallet to start the game.
+3. **Make a Guess**: Predict the dice roll outcome by selecting a number between 1 and 6.
+4. **Claim Rewards**: Winners automatically receive **2 TUC** tokens credited to their wallet.
 
-## Deployment
-- **Smart Contract Address**:  0x231302E33e34CDa54f807Af2e2e1e9A082b7Df69
-- **Token Used**: TheUnlimitedCoin (TUC).
-- **View In Explorer** [Visit](https://sepolia.mantlescan.xyz/address/0x231302E33e34CDa54f807Af2e2e1e9A082b7Df69)
+---
+
+## Deployment Details
+- **Smart Contract Address (Game)**: `0x7F053fFD695204168cEDf535128bd0CF73F6A452`
+- **Smart Contract Address (MemeCoin)**: `0xa1b68a5fD0E5fA13cD6B8031A2Ee8ce084D31b2e`
+- **Token Used**: **TheUnlimitedCoin (TUC)**
+
+---
 
 ## Getting Started
 1. **Clone the Repository**: Download the source code to your local machine.
-2. **Deploy the Contract**: Use the provided Solidity contract to deploy on the testnet.
-3. **Set Up the Frontend**: Configure the frontend to connect to your deployed contract.
-4. **Connect Wallet**: Open the web interface, connect using MetaMask, and start playing!
+2. **Deploy the Contract**: Use the provided Solidity smart contract to deploy on **Neo X Testnet T4**.
+3. **Set Up the Frontend**: Configure the frontend to interact with the deployed contract and connect to the **Neo X Testnet T4**.
+4. **Connect Wallet**: Open the web interface, connect your wallet, and start playing.
+
+---
 
 ## Future Enhancements
-- **Leaderboard**: Display top players based on their performance.
-- **Mobile Support**: Optimize the game for mobile platforms.
-- **Enhanced Gameplay**: Add additional features like multiplayer support or special game modes.
-- **NFT Rewards**: Offer exclusive NFTs as rewards for winning streaks.
+- **Leaderboard**: Showcase top players based on their winning streaks.
+- **Mobile Optimization**: Enhance the game for seamless mobile gameplay.
+- **New Game Modes**: Introduce multiplayer modes and unique game challenges.
+- **NFT Rewards**: Reward players with exclusive NFTs for consecutive wins.
+
+---
 
 ## Contribution
-Contributions are welcome! Fork the repository, create a new branch, and submit a pull request.
+Contributions are welcome! Feel free to fork the repository, create a new branch, and submit a pull request to suggest improvements or add new features.
 
+---
 
+### Note:
+This project is deployed on the **Neo X Testnet T4**, with **GAS** as the transaction currency. Ensure you are connected to the correct network when interacting with the application.
