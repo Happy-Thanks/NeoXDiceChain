@@ -63,6 +63,15 @@ The game interface is built using **HTML, CSS, and JavaScript**, ensuring a smoo
 
 ---
 
+## Images
+![Screenshot 2024-12-24 173554](https://github.com/user-attachments/assets/8f5f2b38-0708-448f-96b7-024eed008770)
+
+![Screenshot 2024-12-24 173616](https://github.com/user-attachments/assets/ba181237-680e-4d79-8ae9-639a45475a2f)
+
+![Screenshot 2024-12-24 173727](https://github.com/user-attachments/assets/331f9560-bf08-4422-bb9b-e547e0b25ed3)
+
+---
+
 ## Contribution
 Contributions are welcome! Feel free to fork the repository, create a new branch, and submit a pull request to suggest improvements or add new features.
 
